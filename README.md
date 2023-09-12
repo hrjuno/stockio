@@ -63,7 +63,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
 
 
 ## 2) Membuat bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
-![alt text]()
+![image_2023-09-13_00-32-40](https://github.com/hrjuno/stockio/assets/121445072/15051235-d2df-44c4-a8a7-6ab2e94e95f8)
 
   Penjelasan:
   1. Client membuka browser untuk mengakses website, kemudian `Client (browser)` mengirimkan HTTP request ke URL tertentu dan ditangkap oleh `urls.py`
