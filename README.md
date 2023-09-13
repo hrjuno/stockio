@@ -115,4 +115,8 @@ Link Adaptable : https://stockio.adaptable.app/main/
     
   Perbedaan utama antara ketiga pola ini adalah cara mereka mengelola tampilan dan koneksi antara Model dan View/Template/ViewModel. MVC adalah pola yang umum digunakan dalam pengembangan tradisional, MVT adalah varian dari MVC yang digunakan dalam kerangka kerja web Django, dan MVVM adalah pola yang sering digunakan dalam pengembangan aplikasi berbasis objek, terutama di lingkungan seperti aplikasi desktop atau mobile. Pemilihan pola tergantung pada jenis aplikasi dan kerangka kerja yang digunakan.
 
+Referensi:
+- https://pbp-fasilkom-ui.github.io/ganjil-2024/
+- https://levelup.gitconnected.com/mvc-vs-mvp-vs-mvvm-35e0d4b933b4
+- https://www.geeksforgeeks.org/python-virtual-environment/
 
