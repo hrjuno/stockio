@@ -10,7 +10,7 @@ class mainTest(TestCase):
         response = Client().get('/main/')
         self.assertTemplateUsed(response, 'main.html')
 
-    def create_product(self, name='object1', amount=5, description='things'):
+    def create_product(self, name='Interstellar', amount=5, description='Space travel'):
         return Product.objects.create(name=name, amount=amount, description=description)
 
     def test_product_name_max_length(self):
