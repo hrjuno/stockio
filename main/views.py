@@ -8,12 +8,14 @@ from django.core import serializers
 
 def show_main(request):
     products = Product.objects.all()
+    total_amount = sum(product.amount for product in products)
 
     context = {
         'app_name': 'Stockio',
         'name': 'Harjuno Abdullah',
         'class' : 'PBP C',
-        'products' : products
+        'products' : products,
+        'total_amount' : total_amount,
     }
     return render(request, "main.html", context)
 
@@ -26,6 +28,11 @@ def create_product(request):
 
     context = {'form': form}
     return render(request, "create_product.html", context)
+
+def product_list(request):
+    products = Product.objects.all()
+    total_amount = sum(product.amount for product in products)
+    return render(request, 'main.html', {'products': products, 'total_amount': total_amount})
 
 def show_xml(request):
     data = Product.objects.all()

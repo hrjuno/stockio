@@ -2,16 +2,15 @@
 
 {% block content %}
     <h1>STOCKIO</h1>
-    <h3>Selling physical copies of movies</h3>
+    <h2>Selling physical copies of movies</h2>
 
-    <h5>App Name: </h5>
-    <p>{{ app_name }}</p>
+    <h4>App Name: {{ app_name }}</h4>
 
-    <h5>Name: </h5>
-    <p>{{ name }}</p>
+    <h4>Name: {{ name }}</h4>
 
-    <h5>Class: </h5>
-    <p>{{ class }}</p>
+    <h4>Class: {{ class }}</h4>
+
+    <p>There are {{ total_amount }} physical copies of movies currently available</p>
 
     <table>
         <tr>
