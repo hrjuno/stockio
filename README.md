@@ -4,35 +4,35 @@ Kelas          : PBP C
 
 Link Adaptable : https://stockio.adaptable.app/main/
 
+---
 # Tugas 3
 <details>
-<summary>## 1) Perbedaan antara form `POST` dan form `GET` dalam Django</summary>
+<summary>1) Perbedaan antara form `POST` dan form `GET` dalam Django</summary>
 
-  1. **DESKRIPSI**
+  * **DESKRIPSI**
       * POST
         Browser mengemas data formulir, memproses dalam bentuk code untuk pengiriman, dan mengirimkannya ke server. Respon diterima setelah pengolahan di sisi server.
       * GET
-        Data formulir dikemas dalam string dan digunakan untuk membentuk URL. URL berisi alamat pengiriman data beserta kunci dan nilai data.
   
-  2. **PENGGUNAAN**
+  * **PENGGUNAAN**
       * POST
         Digunakan untuk permintaan yang dapat mengubah keadaan sistem, seperti operasi yang mempengaruhi database.
       * GET
         Digunakan untuk permintaan yang tidak mempengaruhi keadaan sistem, seperti permintaan pencarian atau operasi lainnya.
 
-  3. **METODE PENGIRIMAN**  
+  * **METODE PENGIRIMAN**  
       * POST
         Data  dikirim sebagai bagian dari permintaan HTTP POST. Data ini tidak akan muncul di URL dan biasanya digunakan untuk mengirim data yang bersifat sensitif atau besar, seperti kata sandi atau unggahan file.
       * GET
         Data dikirim sebagai parameter dalam URL. Data ini akan terlihat di baris URL dan biasanya digunakan untuk mengirim data yang tidak sensitif, seperti parameter pencarian atau filter.  
 
-  4. **KEAMANAN**
+  * **KEAMANAN**
       * POST
         Lebih aman karena informasi yang mengandung data sensitif tidak terlihat dalam URL dan tidak mudah diakses oleh pihak ketiga.
       * GET
         Kurang aman untuk data sensitif dan operasi sistem penting karena data dikirimkan dalam URL dan dapat terlihat oleh orang lain.
 
-  5. **CACHING**
+  * **CACHING**
       * POST
         POST tidak dapat disimpan dalam cache, karena permintaan POST dapat mengubah data server.
       * GET
@@ -40,9 +40,9 @@ Link Adaptable : https://stockio.adaptable.app/main/
 </details>
 
 <details>
-<summary>## 2) Perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data</summary>
+<summary>2) Perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data</summary>
 
-  1. **XML (eXtensible Markup Language)**
+  * **XML (eXtensible Markup Language)**
       * Tujuan Utama
         XML digunakan untuk menyimpan dan mempertukarkan data terstruktur antar sistem. Ini memungkinkan untuk mendefinisikan struktur data khusus sesuai kebutuhan.
       * Keunggulan
@@ -50,7 +50,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
       * Kekurangan
         Lebih berat dan kompleks dalam hal sintaksis, memerlukan lebih banyak karakter untuk mendefinisikan elemen dan struktur data. 
  
-  2. **JSON (JavaScript Object Notation)**
+  * **JSON (JavaScript Object Notation)**
       * Tujuan Utama
         JSON terutama digunakan untuk pertukaran data di lingkungan yang lebih ringan dan efisien seperti web dan aplikasi seluler. Ini adalah format data ringan yang memanfaatkan sintaksis JavaScript.
       * Keunggulan
@@ -58,7 +58,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
       * Kekurangan
         Tidak mendukung validasi bawaan, membutuhkan pendekatan manual untuk memastikan data sesuai dengan struktur yang diinginkan. 
     
-  3. **HTML (Hypertext Markup Language)**
+  * **HTML (Hypertext Markup Language)**
       * Tujuan Utama
         HTML digunakan untuk membuat struktur dan tata letak halaman web, serta menentukan cara konten disajikan di browser.
       * Keunggulan
@@ -69,27 +69,32 @@ Link Adaptable : https://stockio.adaptable.app/main/
 </details>
 
 <details>
-<summary>## 3) Alasan JSON sering digunakan dalam pertukaran data antara aplikasi web modern</summary>
+<summary>3) Alasan JSON sering digunakan dalam pertukaran data antara aplikasi web modern</summary>
 
-  1. **Readability**
+  * **Readability**
+
       JSON menggunakan struktur data yang sederhana dan mudah dipahami oleh manusia. Data disusun dalam format teks yang terorganisir dengan baik, membuatnya mudah untuk dibaca dan diinterpretasikan oleh pengembang dan mesin.
 
-  2. **Efisiensi**
+  * **Efisiensi**
+
       JSON memiliki ukuran yang kecil dibandingkan dengan format pertukaran data lain seperti XML. Ini mengakibatkan pengiriman dan penerimaan data yang lebih cepat, menghemat waktu dan sumber daya jaringan.
 
-  3. **Keamanan**
+  * **Keamanan**
+
       JSON memungkinkan penggunaan metode validasi dan sanitasi data untuk memastikan bahwa data yang diterima adalah data yang benar dan aman. Pengguna dapat menerapkan kontrol keamanan tambahan seperti enkripsi untuk melindungi data.
 
-  4. **Fleksibilitas**
+  * **Fleksibilitas**
+
       JSON mendukung struktur data yang fleksibel, memungkinkan pengembang untuk menyesuaikan format data sesuai dengan kebutuhan spesifik aplikasi. Jika diperlukan, dapat dengan mudah menambahkan atau mengubah atribut data tanpa mempengaruhi kompatibilitas dengan aplikasi lain.
 
-  5. **Kompatibilitas**
+  * **Kompatibilitas**
+  
       JSON kompatibel dengan sebagian besar bahasa pemrograman dan platform. Ini memungkinkan aplikasi yang ditulis dalam bahasa yang berbeda untuk saling berkomunikasi dan bertukar data tanpa mengalami kendala kompatibilitas.
 
 </details>
 
 <details>
-<summary>## 4) Bagaimana cara mengimplementasikan checklist pada tugas</summary>
+<summary>4) Bagaimana cara mengimplementasikan checklist pada tugas</summary>
 
 - [x] **Membuat input `form` untuk menambahkan objek model pada app sebelumnya**
 
@@ -117,6 +122,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
 - [x] **Tambahkan 5 fungsi `views` untuk melihat objek yang sudah ditambahkan dalam format HTML, XML, JSON, XML by ID, dan JSON by ID**
       
     * HTML
+
       Dalam folder `templates` di root folder dan buat file HTML baru dengan nama `base.html` sebagai template dasar yang digunakan sebagai kerangka umum untuk halaman-halaman web lainnya pada proyek. Pada `base.html` isi dengan:
       ```
       {% load static %}
@@ -215,15 +221,19 @@ Link Adaptable : https://stockio.adaptable.app/main/
       ```
 
     * Serializer untuk XML dan JSON
+
       Buka file `views.py` pada direktori `main` lalu impor fungsi `HttpResponse` dan fungsi `Serializer` yang digunakan untuk menerjemahkan objek model menjadi format lain (seperti XML atau JSON).
 
     * XML
+
       Buat fungsi `show_xml` yang menerima parameter _request_ dan buat variabel `data` yang akan menyimpan hasil query dari seluruh data yang ada di `Product` lalu return functionnya adalah `HttpResponse` yang berisi parameter data hasil query yang sudah diserialisasi dalam format XML dan parameter `content_type="application/xml".`.
 
     * JSON
+
       Buka file `views.py` di folder `main` lalu buat fungsi baru bernama `show_json` dengan variabel `data` yang akan menyimpan seluruh hasil query data yang ada pada `Product`. Tambahkan return function berupa `HttpResponse` yang memiliki paramater data hasil query yang udah diserialisasi menjadi JSON dan parameter `content_type="application/json"`.
 
     * ID XML dan JSON
+
       Buka file `views.py` di folder `main` lalu buat fungsi baru bernama `show_xml_by_id` dan `show_json_by_id` dengan variabel `data` yang akan menyimpan hasil query data dengan id tertentu yang ada pada `Product`. Tambahkan return function berupa `HttpResponse` yang memiliki paramater data hasil query yang udah diserialisasi menjadi JSON atau XML dan parameter `content_type` yang sesuai dengan format XML atau JSON (format XML: `"application/xml"` atau format JSON: `"application/json"`).
 
 - [x] **Membuat routing URL untuk masing-masing `views` yang telah ditambahkan pada poin 2**
@@ -243,7 +253,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
 </details>
 
 <details>
-<summary>## 5) Screenshots Postman</summary>
+<summary>Screenshots Postman</summary>
 
 * HTML
 
@@ -257,10 +267,17 @@ Link Adaptable : https://stockio.adaptable.app/main/
 
 </details>
 
+Referensi:
+- https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-2
+- https://www.deltaxml.com/blog/xml/whats-the-relationship-between-xml-json-html-and-the-internet/
+- https://brandmed.com/blog/development/the-power-of-json-whats-behind-the-popularity
+- https://www.w3schools.com/tags/ref_httpmethods.asp
+- https://www.guru99.com/json-vs-xml-difference.html
+
 ---
 # Tugas 2
 <details>
-<summary>## 1) Bagaimana cara mengimplementasikan checklist pada tugas</summary>
+<summary>1) Bagaimana cara mengimplementasikan checklist pada tugas</summary>
 
 - [x] **Membuat sebuah proyek Django baru**
 
@@ -319,7 +336,8 @@ Link Adaptable : https://stockio.adaptable.app/main/
 </details>
 
 <details>
-<summary>## 2) Membuat bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.</summary>
+<summary>2) Membuat bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.</summary>
+
 
 ![image_2023-09-13_00-32-40](https://github.com/hrjuno/stockio/assets/121445072/15051235-d2df-44c4-a8a7-6ab2e94e95f8)
 
@@ -332,7 +350,8 @@ Link Adaptable : https://stockio.adaptable.app/main/
 </details>
 
 <details>
-<summary>## 3) Mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?</summary>
+<summary>3) Mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?</summary>
+
 
   Virtual environment digunakan dalam pengembangan perangkat lunak, termasuk pengembangan aplikasi web berbasis Django, untuk beberapa alasan penting, seperti memungkinkan environment yang terisolasi untuk setiap proyek, menghindari konflik dependencies, memudahkan berbagi proyek dengan orang lain, memudahkan pengelolaan paket Python yang digunakan oleh proyek, membantu pengujian proyek dalam environment yang terisolasi, serta mencegah paket antar proyek tercampur dan mengurangi risiko masalah yang tidak diketahui.
 
@@ -342,9 +361,10 @@ Link Adaptable : https://stockio.adaptable.app/main/
 <details>
 <summary>## 4) Apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya?</summary>
 
+
   MVC (Model-View-Controller), MVT (Model-View-Template), dan MVVM (Model-View-ViewModel) adalah pola arsitektur perangkat lunak yang digunakan dalam pengembangan aplikasi. Mereka memiliki konsep dasar yang serupa, yaitu memisahkan komponen aplikasi menjadi bagian-bagian yang berbeda untuk membantu pemahaman, pemeliharaan, dan pengujian. Namun, ada perbedaan penting dalam cara masing-masing pola ini diimplementasikan.
   
-  1. **MVC (Model-View-Controller)**:
+  * **MVC (Model-View-Controller)**:
 
       * Model: Mewakili data dan logika aplikasi.
       * View: Bertanggung jawab untuk tampilan grafis atau antarmuka pengguna.
@@ -355,7 +375,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
       * MVC adalah pola arsitektur yang umum digunakan dalam pengembangan perangkat lunak tradisional, seperti aplikasi desktop.
       * Controller adalah inti dari MVC dan berfungsi sebagai penghubung antara Model dan View.
 
-  2. **MVT (Model-View-Template)**:
+  * **MVT (Model-View-Template)**:
     
       * Model: Mewakili data dan logika aplikasi.
       * View: Menangani tampilan pengguna, tetapi dalam kerangka kerja Django, sebagian besar logika tampilan dikendalikan oleh Template.
@@ -366,7 +386,7 @@ Link Adaptable : https://stockio.adaptable.app/main/
       * MVT adalah variasi dari MVC yang diterapkan secara khusus dalam kerangka kerja Django untuk pengembangan web.
       * Pada MVT, Template memiliki peran yang lebih besar dalam menangani tampilan dibandingkan dengan View.
     
-  3. **MVVM (Model-View-ViewModel)**:
+  * **MVVM (Model-View-ViewModel)**:
     
       * Model: Mewakili data dan logika aplikasi.
       * View: Merupakan tampilan grafis yang dilihat oleh pengguna.
@@ -384,9 +404,3 @@ Referensi:
 - https://pbp-fasilkom-ui.github.io/ganjil-2024/
 - https://levelup.gitconnected.com/mvc-vs-mvp-vs-mvvm-35e0d4b933b4
 - https://www.geeksforgeeks.org/python-virtual-environment/
----
-- https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-2
-- https://www.deltaxml.com/blog/xml/whats-the-relationship-between-xml-json-html-and-the-internet/
-- https://brandmed.com/blog/development/the-power-of-json-whats-behind-the-popularity
-- https://www.w3schools.com/tags/ref_httpmethods.asp
-- https://www.guru99.com/json-vs-xml-difference.html
