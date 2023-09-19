@@ -255,15 +255,25 @@ Link Adaptable : https://stockio.adaptable.app/main/
 <details>
 <summary>Screenshots Postman</summary>
 
-* HTML
+* **HTML**
 
-* XML
+  ![HTML](https://github.com/hrjuno/stockio/assets/121445072/22b2032e-9179-4a72-9b75-620903309437)
 
-* JSON
+* **XML**
 
-* XML by ID
+  ![XML](https://github.com/hrjuno/stockio/assets/121445072/8a635e1d-a0f5-41a1-a0a1-1d1d6107d2f3)
 
-* JSON by ID
+* **JSON**
+  
+  ![JSON](https://github.com/hrjuno/stockio/assets/121445072/f48f9a10-6dd1-4952-9b99-455afa2228af)
+
+* **XML by ID**
+
+  ![XML_by_ID](https://github.com/hrjuno/stockio/assets/121445072/483ce8fd-8a4c-4d89-904f-2f814caf1159)
+
+* **JSON by ID**
+
+  ![JSON_by_ID](https://github.com/hrjuno/stockio/assets/121445072/c112a72a-3b8f-4dc5-8463-aac753a883f4)
 
 </details>
 
@@ -359,7 +369,7 @@ Referensi:
 </details>
 
 <details>
-<summary>## 4) Apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya?</summary>
+<summary>4) Apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya?</summary>
 
 
   MVC (Model-View-Controller), MVT (Model-View-Template), dan MVVM (Model-View-ViewModel) adalah pola arsitektur perangkat lunak yang digunakan dalam pengembangan aplikasi. Mereka memiliki konsep dasar yang serupa, yaitu memisahkan komponen aplikasi menjadi bagian-bagian yang berbeda untuk membantu pemahaman, pemeliharaan, dan pengujian. Namun, ada perbedaan penting dalam cara masing-masing pola ini diimplementasikan.
