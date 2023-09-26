@@ -26,15 +26,44 @@
                 <td>{{product.name}}</td>
                 <td>{{product.amount}}</td>
                 <td>{{product.description}}</td>
+
+                <td>
+                    <form method="post" action="{% url 'main:plus_product_amount' product.id %}">
+                        {% csrf_token %}
+                        <button type="submit">+</button>
+                    </form>
+                </td>
+        
+                <td>
+                    <form method="post" action="{% url 'main:minus_product_amount' product.id %}">
+                        {% csrf_token %}
+                        <button type="submit">-</button>
+                    </form>
+                </td>
+        
+                <td>
+                    <form method="post" action="{% url 'main:remove_product' product.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
             </tr>
         {% endfor %}
     </table>
+
+    <h5>Last logged in session: {{ last_login }}</h5>
     
     <br />
     
     <a href="{% url 'main:create_product' %}">
         <button>
             Add New Movie
+        </button>
+    </a>
+
+    <a href="{% url 'main:logout' %}">
+        <button>
+            Logout
         </button>
     </a>
     

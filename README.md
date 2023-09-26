@@ -5,6 +5,336 @@ Kelas          : PBP C
 Link Adaptable : https://stockio.adaptable.app/main/
 
 ---
+# Tugas 4
+<details>
+<summary>1) Pengertian Django UserCreationForm, dan kelebihan dan kekurangannya</summary>
+
+  UserCreationForm adalah sebuah formulir yang disediakan oleh Django, sebuah framework web Python yang populer, untuk membuat formulir pendaftaran pengguna (user registration form) dengan mudah. Formulir ini digunakan untuk mengumpulkan informasi yang diperlukan saat seorang pengguna baru mendaftar di situs web atau aplikasi Django.
+
+  **Kelebihan UserCreationForm:**
+   
+   1. Mudah Digunakan
+     
+      UserCreationForm sudah siap pakai dan mudah digunakan. Developer hanya perlu mengimpor dan menggunakannya dalam proyek Django tanpa perlu menulis kode formulir dari awal.
+      
+   2. Validasi Otomatis
+     
+      Form ini memiliki validasi otomatis untuk memastikan bahwa pengguna mengisi semua kolom yang diperlukan dengan benar, seperti alamat email yang valid dan kata sandi yang memenuhi kriteria keamanan.
+      
+   3. Customizable
+      Developer dapat dengan mudah menyesuaikan UserCreationForm sesuai dengan kebutuhan proyek dengan menambahkan atau menghapus bidang formulir atau mengganti pesan kesalahan yang ditampilkan kepada pengguna.
+   
+   **Kekurangan UserCreationForm:**
+   
+  1. Kurangnya Fleksibilitas
+     
+      Meskipun mudah digunakan, dalam beberapa kasus, developer mungkin memerlukan formulir pendaftaran pengguna yang sangat kustom. Dalam situasi ini, developer perlu menulis formulir sendiri daripada mengandalkan UserCreationForm.
+   
+  2. Tidak Memungkinkan Pendaftaran Eksternal
+     
+     Jika developer ingin mengintegrasikan pendaftaran pengguna melalui penyedia eksternal (misalnya, login dengan Google atau Facebook), developer perlu menulis kode tambahan untuk mengimplementasikannya.
+   
+   3. Tidak Memungkinkan Pendaftaran secara Anonim
+      
+      UserCreationForm dirancang untuk pendaftaran pengguna yang terautentikasi. Jika developer membutuhkan pendaftaran secara anonim (misalnya, untuk pengguna yang belum memiliki akun), developer perlu membuat formulir tambahan atau memodifikasi form ini secara ekstensif.
+</details>
+
+<details>
+<summary>2) Perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting</summary>
+
+  Authentication dan authorization adalah dua konsep yang penting dalam menjaga keamanan informasi dan akses ke dalam sistem. Meskipun keduanya berhubungan erat, keduanya memiliki beberapa perbedaan, seperti:
+
+  1. **Authentication (Autentikasi)**
+      * Authentication adalah proses verifikasi identitas pengguna atau entitas yang mencoba mengakses ke dalam sistem
+      * Tujuan utama autentikasi adalah untuk memastikan bahwa pengguna atau entitas yang mengakses sistem adalah mereka yang telah diketahui identitasnya atau telah menjadi bagian dari sistem
+      * Autentikasi biasanya melibatkan penggunaan kombinasi nama pengguna dan kata sandi, atau metode lain untuk membuktikan identitas
+
+  2. **Authorization (Otorisasi)**
+      * Authorization adalah proses yang mengatur dan mengontrol akses pengguna atau entitas yang sudah terotentikasi ke sistem atau layanan tertentu
+      * Tujuan utama otorisasi adalah untuk menentukan apa yang diizinkan atau tidak diizinkan oleh pengguna atau entitas yang telah terotentikasi
+      * Otorisasi melibatkan definisi aturan atau kebijakan yang menentukan tingkat akses atau izin yang diberikan kepada pengguna atau entitas, seperti hak akses baca-tulis, hak akses hanya baca, dan sebagainya
+
+  Kesimpulannya, autentikasi adalah langkah pertama dalam mengamankan akses ke sistem dengan memeriksa identitas pengguna atau entitas, sementara otorisasi adalah langkah kedua yang mengontrol apa yang dapat dilakukan oleh pengguna atau entitas yang sudah terotentikasi. Keduanya bekerja bersama untuk memastikan bahwa hanya pengguna yang sah dan diizinkan yang dapat mengakses sumber daya atau layanan yang dimaksud dalam sistem.
+
+</details>
+
+<details>
+<summary>3) Definisi _cookies_ dalam konteks aplikasi web, dan bagaimana Django menggunakan _cookies_ untuk mengelola data sesi pengguna</summary>
+
+Cookies adalah sejumlah kecil data yang disimpan oleh server web di komputer pengguna melalui peramban (browser) pengguna saat berinteraksi dengan sebuah situs web. Cookies digunakan dalam konteks aplikasi web untuk menyimpan informasi tertentu yang dapat diakses kembali oleh server web ketika pengguna kembali mengunjungi situs tersebut. Cookies memiliki beberapa fungsi utama dalam aplikasi web, termasuk:
+
+1. **Manajemen Sesi**
+    Cookies sering digunakan untuk mengidentifikasi sesi pengguna. Ketika seorang pengguna masuk ke dalam situs web, server web akan membuat cookie yang berisi identifikasi unik untuk sesi tersebut. Dengan demikian, server dapat mempertahankan konteks sesi pengguna selama kunjungan berlangsung, yang memungkinkan pengguna untuk tetap masuk atau mempertahankan data lainnya seperti keranjang belanja.
+2. **Penyimpanan Preferensi Pengguna**
+    Cookies dapat digunakan untuk menyimpan preferensi pengguna, seperti bahasa yang dipilih atau tema tampilan yang diinginkan. Ini memungkinkan situs web untuk menyajikan pengalaman yang disesuaikan dengan preferensi masing-masing pengguna.
+3. **Pelacakan Aktivitas Pengguna**
+    Cookies juga sering digunakan untuk pelacakan aktivitas pengguna, seperti halaman yang dikunjungi atau item yang dilihat. Ini berguna untuk analisis penggunaan situs web dan pemasaran.
+4. **Autentikasi**
+    Cookies dapat digunakan untuk mengingat informasi otentikasi pengguna, seperti detail masuk pengguna, sehingga pengguna tidak perlu masuk kembali setiap kali mereka mengunjungi situs.
+
+Django, sebagai framework web Python, menyediakan cara yang nyaman untuk mengelola data sesi pengguna menggunakan cookies. Django menyediakan modul `django.contrib.sessions.middleware.SessionMiddleware` yang mengatur manajemen sesi pengguna secara otomatis. Berikut adalah cara Django menggunakan cookies untuk mengelola data sesi pengguna:
+
+1. **Pengaturan Sesi**
+    Pengguna dapat mengonfigurasi pengaturan sesi di dalam berkas settings.py proyek Django. Pengguna dapat mengatur penyimpanan sesi (defaultnya adalah dalam database), waktu kadaluwarsa sesi, dan konfigurasi lainnya terkait sesi.
+2. **Membaca dan Menyimpan Data Sesi**
+    Django menyediakan API yang memudahkan Anda untuk menyimpan dan mengakses data sesi pengguna. Pengguna dapat menyimpan data ke dalam sesi dengan mudah, dan data ini akan dienkripsi dan disimpan dalam cookie pada sisi pengguna.
+3. **Middleware**
+    Middleware sesi diaktifkan dengan menambahkan SessionMiddleware ke dalam daftar middleware di pengaturan Django. Middleware ini akan mengelola cookies dan data sesi secara otomatis.
+
+</details>
+
+<details>
+<summary>4) Apakah penggunaan _cookies_ aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?</summary>
+
+Penggunaan cookies dalam pengembangan web memiliki risiko potensial yang harus diwaspadai, dan keamanannya sangat tergantung pada bagaimana cookies digunakan dan dikonfigurasi dalam aplikasi web Anda. Berikut adalah beberapa risiko potensial terkait dengan penggunaan cookies:
+
+   1. **Cross-Site Scripting (XSS)**
+         Penyerangan XSS dapat memungkinkan penyerang menyuntikkan kode berbahaya ke dalam halaman web yang akan diakses oleh pengguna lain. Kode berbahaya ini dapat digunakan untuk mencuri cookies pengguna. Mencegah XSS adalah penting untuk melindungi cookies dan data sensitif lainnya.
+
+   2. **Privasi Pengguna**
+         Cookies dapat digunakan untuk melacak aktivitas pengguna secara online, yang dapat menciptakan masalah privasi. Oleh karena itu, penting untuk memiliki kebijakan privasi yang jelas dan memberikan pengguna opsi untuk mengontrol cookies.
+
+   3. **Cookies Tampering**
+         Pengguna dapat mencoba memodifikasi nilai cookies yang tersimpan di perangkat mereka untuk mengakses atau memanipulasi data sesi atau informasi lain yang disimpan dalam cookies. Oleh karena itu, penting untuk mengamankan cookies dan menerapkan tanda tangan (signing) pada cookies.
+
+   4. **Cross-Site Request Forgery (CSRF)**
+         Penyerangan CSRF dapat memaksa pengguna yang sudah diautentikasi untuk melakukan tindakan tertentu tanpa izin mereka, seperti mengirim permintaan yang menggunakan cookies mereka. Menggunakan mekanisme anti-CSRF adalah penting untuk melindungi cookies dari penyerangan ini.
+
+   5. **Cookie Sniffing**
+         Penyadap (sniffer) di jaringan dapat mencoba mencuri informasi cookies saat dikirimkan antara perangkat pengguna dan server. Untuk mengatasi ini, cookies harus dienkripsi jika berisi informasi sensitif.
+
+</details>
+
+<details>
+<summary>5) Cara mengimplementasikan checklist tugas secara _step-by-step_</summary>
+
+- [x] **Mengimplementasikan fungsi registrasi, login, dan logout untuk memungkinkan pengguna untuk mengakses aplikasi sebelumnya dengan lancar**
+
+1. Registrasi
+   
+   Buka file `views.py` yang ada di folder `main` dan buat fungsi baru dengan nama `register` dan memiliki parameter `request`. Lalu impor `redirect`, `UserCreationForm`, dan `messages`. Isi dari fungsi `register` adalah:
+   ```
+   def register(request):
+    form = UserCreationForm()
+
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your account has been successfully created!')
+            return redirect('main:login')
+    context = {'form':form}
+    return render(request, 'register.html', context)
+   ```
+   `form = UserCreationForm(request.POST)` untuk membuat variabel `form` yang dimana ia adalah `UserCreationForm` lalu kita masukkan QueryDict sesuai input dari user pada `request.POST`. `form.is_valid()` berguna untuk melakukan validasi pada input form. `form.save()` supaya data dari form dapat tersimpan. User dapat mengetahui apabila berhasil me-register dengan melihat pesan pada web karena kita menggunakan `messages.success(request, 'Your account has been successfully created!')`. Setelah user berhasil mendaftar, user akan kembali dari halaman register, jadi, kita menambahkan kode `return redirect('main:show_main')`.
+   Halaman register akan kita buat dengan file `register.html` yang ada di folder `main/templates` dengan isi:
+   ```
+   {% extends 'base.html' %}
+   
+   {% block meta %}
+       <title>Register</title>
+   {% endblock meta %}
+   
+   {% block content %}  
+   
+   <div class = "login">
+  
+        <h1>Register</h1>  
+   
+           <form method="POST" >  
+               {% csrf_token %}  
+               <table>  
+                   {{ form.as_table }}  
+                   <tr>  
+                       <td></td>
+                       <td><input type="submit" name="submit" value="Daftar"/></td>  
+                   </tr>  
+               </table>  
+           </form>
+   
+       {% if messages %}  
+           <ul>   
+               {% for message in messages %}  
+                   <li>{{ message }}</li>  
+                   {% endfor %}  
+           </ul>   
+       {% endif %}
+   
+   </div>  
+   
+   {% endblock content %}
+   ```
+   Tambahkan path url milik halaman register ke file `urls.py` pada direktori `main` dengan mengimpor fungsi `register` dari `views.py` dan tambahkan `path('register/', register, name='register')` pada variabel `urlpatterns`.
+   
+   
+2. Login
+
+  Buka file `views.py` yang ada di folder `main` dan buat fungsi baru dengan nama `login_user` yang menerima parameter `request`. Lalu impor `authenticate` dan `login`. Isi dari fungsi `login` adalah:
+   ```
+   def login_user(request):
+       if request.method == 'POST':
+           username = request.POST.get('username')
+           password = request.POST.get('password')
+           user = authenticate(request, username=username, password=password)
+           if user is not None:
+               login(request, user)
+               return redirect('main:show_main')
+           else:
+               messages.info(request, 'Sorry, incorrect username or password. Please try again.')
+       context = {}
+       return render(request, 'login.html', context)
+   ```
+   `authenticate(request, username=username, password=password` berguna untuk melakukan autentikasi user dengan menggunakan username dan password yang diterima dari `request` yang dikirim user saat ingin login.
+   Halaman login akan kita buat dengan file `login.html` yang ada di folder `main/templates` dengan isi:
+   ```
+   {% extends 'base.html' %}
+   
+   {% block meta %}
+       <title>Login</title>
+   {% endblock meta %}
+   
+   {% block content %}
+
+   <div class = "login">
+   
+       <h1>Login</h1>
+   
+       <form method="POST" action="">
+           {% csrf_token %}
+           <table>
+               <tr>
+                   <td>Username: </td>
+                   <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
+               </tr>
+                       
+               <tr>
+                   <td>Password: </td>
+                   <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+               </tr>
+   
+               <tr>
+                   <td></td>
+                   <td><input class="btn login_btn" type="submit" value="Login"></td>
+               </tr>
+           </table>
+       </form>
+   
+       {% if messages %}
+           <ul>
+               {% for message in messages %}
+                   <li>{{ message }}</li>
+               {% endfor %}
+           </ul>
+       {% endif %}     
+           
+       Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
+   
+   </div>
+
+   {% endblock content %}
+   ```
+   Tambahkan path url milik halaman login ke file `urls.py` pada direktori `main` dengan mengimpor fungsi `login` dari `views.py` dan tambahkan `path('login/', login_user, name='login')` pada variabel `urlpatterns`.
+
+3. Logout
+   
+   Buka file `views.py` yang ada di folder `main` dan buat fungsi baru dengan nama `logout_user` yang menerima parameter `request`. Lalu impor `logout`. Isi dari fungsi `logout_user` adalah:
+   ```
+   def logout_user(request):
+       logout(request)
+       return redirect('main:login')
+   ```
+   `logout(request)` akan menghapus sesi pengguna yang saat ini sudah masuk. Lalu user akan kembali ke halaman login dengan `return redirect('main:login')`.
+   Tambahkan:
+   ```
+   ...
+   <a href="{% url 'main:logout' %}">
+       <button>
+           Logout
+       </button>
+   </a>
+   ...
+   ```
+   Setelah hyperlink tag untuk Add New Product yang ada di file `main.html`.
+   Tambahkan path url milik halaman logout ke file `urls.py` pada direktori `main` dengan mengimpor fungsi `logout_user` dari `views.py` dan tambahkan `path('logout/', logout_user, name='logout')` pada variabel `urlpatterns`.
+
+- [x] **Membuat dua akun pengguna dengan masing-masing tiga dummy data menggunakan model yang telah dibuat pada aplikasi sebelumnya untuk setiap akun di lokal**
+
+   Pada halaman pertama login terdapat tombol `Register Now` untuk membuat akun baru. Kita dapat membuat akun  baru dengan memasukkan username dan password yang sesuai ketentuan dan meng-click tombol daftar. Setelah membuat akun kita bisa login pada halaman pertama tadi dan memasukkan username dan password dari akun baru kita. setelah login, kita dapat menambah produk sesuai keinginan.
+
+- [x] **Menghubungkan model Item dengan User**
+
+Buka `models.py` yang ada di direktori `main` lalu impor `User` dari `django.contrib.auth.models`. Pada model `Product` yang ada tambahkan kode:
+   ```
+   class Product(models.Model):
+      user = models.ForeignKey(User, on_delete=models.CASCADE)
+      ...
+   ```
+   Hal ini dilakukan supaya kita menghubungkan satu produk dengan satu user menggunakan relationship, jadi sebuah produk pasti terasosiasi dengan user.
+   Buka `viwes.py` yang ada di direktori `main` dan modifikasi fungsi `create_product` menjadi:
+   ```
+   def create_product(request):
+   form = ProductForm(request.POST or None)
+   
+   if form.is_valid() and request.method == "POST":
+     product = form.save(commit=False)
+     product.user = request.user
+     product.save()
+     return HttpResponseRedirect(reverse('main:show_main'))
+   ...
+   ```
+   `commit=False` berfungsi supaya Django tidak langsung menyimpan objek yang dibuat dari form ke database sehingga kita dapat memodifikasi objek tersebut dahulu. Kita mengisi field `user` dengan objek `User` dari return nilai `request.user` yang sudah terautentikasi untuk menandakan bahwa objek tersebut milik pengguna yang sedang login.
+   Ubah fungsi `show_main` menjadi:
+   ```
+   def show_main(request):
+       products = Product.objects.filter(user=request.user)
+   
+       context = {
+           'name': request.user.username,
+       ...
+   ...
+   ```
+   Hal ini dilakukan agar objek `Product` yang terasosiasi dengan user yang sedang login dapat ditampilkan. Kita menyaring seluruh objek dan hanya mengambil `Product` yang field `user` terisi dengan objek `User` yang sama dengan user yang sedang login. Untuk menampilkan username user yang login pada halaman main kita menggunakan `request.user.username`.
+   Kita lakukan migrasi model dengan `python manage.py makemigration` dan muncul error, untuk mengatasinya pilih 1 supaya kita menetapkan default value untuk field user pada semua row yang dibuat pada di basis data, ketik angka 1 untuk menetapkan user dengan ID 1 (user yang baru kita buat tadi) pada model yang ada. Lakukan `python manage.py migrate` untuk mengaplikasikan migrasi.
+
+- [x] **Menampilkan detail informasi pengguna yang sedang logged in seperti username dan menerapkan cookies seperti last login pada halaman utama aplikasi**
+
+   Buka file `views.py` yang ada di direktori `main` dan impor `HttpResponseRedirect`, `reverse`, dan `datetime`. Kita tambahkan fungsi untuk menambahkan cookie yang bernama `last_login` pada fungsi `login_user`, fungsi `last_login` digunakan untuk mengetahui kapan terakhir kali user login. Cara ini dilakukan dengan mengganti kode yang ada pada conditional `if user is not None` menjadi:
+   ```
+   ...
+   if user is not None:
+       login(request, user)
+       response = HttpResponseRedirect(reverse("main:show_main")) 
+       response.set_cookie('last_login', str(datetime.datetime.now()))
+       return response
+   ...
+   ```
+   `login(request, user)` berguna supaya logint terlebih dahulu. Untuk membuat response, kita menggunakan variabel `response` dan mengisinya dengan `HttpResponseRedirect(reverse("main:show_main"))`. `response.setcookie('last_login', str(datetime.datetime.now()))` berfungsi untuk membuat cookie `last_login` dan menambahkannya ke response tadi.
+   Pada fungsi `show_main` tambahkan `'last_login': request.COOKIES['last_login']` pada variabel `context` supaya kita bisa menambahkan informasi cookie last_login pada response yang akan ditampilkan di web `main.html`.
+   Untuk menghapus cookie `last_login` ketika user `logout` kita modifikasi code `logout_user` menjadi:
+   ```
+   def logout_user(request):
+      logout(request)
+      response = HttpResponseRedirect(reverse('main:login'))
+      response.delete_cookie('last_login')
+      return response
+   ```
+   Lalu pada `main.html` tambahkan:
+   ```
+   ...
+   <h5>Sesi terakhir login: {{ last_login }}</h5>
+   ...
+   ```
+   Untuk menampilkan data last login.
+
+</details>
+
+Referensi:
+- https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-3
+- https://www-javatpoint-com.translate.goog/django-usercreationform?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc
+- https://diginews.id/apa-perbedaan-antara-otentikasi-dan-otorisasi/
+- https://www.niagahoster.co.id/blog/cookies-adalah/
+
+---
 # Tugas 3
 <details>
 <summary>1) Perbedaan antara form `POST` dan form `GET` dalam Django</summary>
