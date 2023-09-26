@@ -90,7 +90,7 @@ Django, sebagai framework web Python, menyediakan cara yang nyaman untuk mengelo
 
 2. **Membaca dan Menyimpan Data Sesi**
 
-    Django menyediakan API yang memudahkan Anda untuk menyimpan dan mengakses data sesi pengguna. Pengguna dapat menyimpan data ke dalam sesi dengan mudah, dan data ini akan dienkripsi dan disimpan dalam cookie pada sisi pengguna.
+    Django menyediakan API yang memudahkan pengguna untuk menyimpan dan mengakses data sesi pengguna. Pengguna dapat menyimpan data ke dalam sesi dengan mudah, dan data ini akan dienkripsi dan disimpan dalam cookie pada sisi pengguna.
 
 3. **Middleware**
 
@@ -101,7 +101,7 @@ Django, sebagai framework web Python, menyediakan cara yang nyaman untuk mengelo
 <details>
 <summary>4) Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?</summary>
 
-Penggunaan cookies dalam pengembangan web memiliki risiko potensial yang harus diwaspadai, dan keamanannya sangat tergantung pada bagaimana cookies digunakan dan dikonfigurasi dalam aplikasi web Anda. Berikut adalah beberapa risiko potensial terkait dengan penggunaan cookies:
+Penggunaan cookies dalam pengembangan web memiliki risiko potensial yang harus diwaspadai, dan keamanannya sangat tergantung pada bagaimana cookies digunakan dan dikonfigurasi dalam aplikasi website pengguna. Berikut adalah beberapa risiko potensial terkait dengan penggunaan cookies:
 
    1. **Cross-Site Scripting (XSS)**
 
