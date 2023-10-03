@@ -9,45 +9,38 @@ Kelas          : PBP C
 
 1. **Element Selector (Tag Selector):**
 
-  * Manfaat: Memilih semua elemen dengan tag yang spesifik
-
-  * Waktu Penggunaan: Ketika ingin menerapkan gaya yang sama pada semua elemen dengan tag tertentu.
+    * Manfaat: Memilih semua elemen dengan tag yang spesifik
+    * Waktu Penggunaan: Ketika ingin menerapkan gaya yang sama pada semua elemen dengan tag tertentu.
 
 2. **Descendant Selector (Space):**
     
-  * Manfaat: Memilih elemen yang merupakan anak atau keturunan dari elemen tertentu.
-  
-  * Waktu Penggunaan: Ketika ingin menerapkan gaya pada elemen yang berada di dalam elemen tertentu.
+    * Manfaat: Memilih elemen yang merupakan anak atau keturunan dari elemen tertentu.
+    * Waktu Penggunaan: Ketika ingin menerapkan gaya pada elemen yang berada di dalam elemen tertentu.
 
 3. **ID Selector (#nama-id):**
 
-  * Manfaat: Memilih elemen dengan ID yang spesifik.
-  
-  * Waktu Penggunaan: ketika ingin menerapkan gaya atau perilaku unik pada satu elemen tertentu.
+    * Manfaat: Memilih elemen dengan ID yang spesifik.
+    * Waktu Penggunaan: ketika ingin menerapkan gaya atau perilaku unik pada satu elemen tertentu.
 
 4. **Class Selector (.nama-kelas):**
 
-  * Manfaat: Memilih elemen berdasarkan kelas yang diberikan.
-
-  * Waktu Penggunaan: Ketika ingin menerapkan gaya yang sama pada beberapa elemen atau grup elemen.
+    * Manfaat: Memilih elemen berdasarkan kelas yang diberikan
+    * Waktu Penggunaan: Ketika ingin menerapkan gaya yang sama pada beberapa elemen atau grup elemen.
 
 5. **Universal Selector (*):**
     
-  * Manfaat: Memilih semua elemen di halaman.
-  
-  * Waktu Penggunaan: Ketika mereset atau menetapkan gaya default untuk semua elemen di halaman.
+    * Manfaat: Memilih semua elemen di halaman.
+    * Waktu Penggunaan: Ketika mereset atau menetapkan gaya default untuk semua elemen di halaman.
 
 6. **Adjacent Sibling Selector (+):**
 
-  * Manfaat: Memilih elemen yang sejajar (saudara sejajar) dari elemen tertentu.
-
-  * Waktu Penggunaan: Ketika ingin menerapkan gaya pada elemen yang berada tepat setelah elemen lain dari jenis yang sama.
+    * Manfaat: Memilih elemen yang sejajar (saudara sejajar) dari elemen tertentu.
+    * Waktu Penggunaan: Ketika ingin menerapkan gaya pada elemen yang berada tepat setelah elemen lain dari jenis yang sama.
 
 7. **Pseudo-Class Selector (:pseudo-class):**
 
-  * Manfaat: Memilih elemen berdasarkan keadaan atau perilaku tertentu (seperti :hover, :active, dsb.)
-
-  * Waktu Penggunaan: Ketika ingin menerapkan gaya berdasarkan interaksi pengguna atau keadaan elemen.
+    * Manfaat: Memilih elemen berdasarkan keadaan atau perilaku tertentu (seperti :hover, :active, dsb.)
+    * Waktu Penggunaan: Ketika ingin menerapkan gaya berdasarkan interaksi pengguna atau keadaan elemen.
 
 </details>
 
@@ -140,7 +133,7 @@ Bootstrap dan Tailwind CSS adalah dua alat yang membantu merancang tampilan situ
 <summary>5) Cara mengimplementasikan checklist tugas secara step-by-step</summary>
 
 - [x] **Kustomisasi halaman login, register, dan tambah inventori semenarik mungkin**
-       
+      
       Sebelum melakukan desain pada HTML, perlu menambahkan link CSS framework dalam case ini adalah Bootstrap dan Java Scriptke dalam `templates/base.html` dan menambahkan tag `<meta name="viewport">` . Untuk menambahkannya bisa dengan menambahkan:
 
           ```
@@ -376,7 +369,7 @@ Bootstrap dan Tailwind CSS adalah dua alat yang membantu merancang tampilan situ
       Untuk menambahkan penanda berbeda di akhir tabel, saya menambahkan CSS untuk last child pada `tr` dengan kode berikut:
 
           ```
-          
+
           table tr:last-child td {
               background-color: rgb(84, 84, 84);
               color: #ffffff;
