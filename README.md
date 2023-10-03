@@ -2,7 +2,35 @@ Nama           : Harjuno Abdullah
 
 Kelas          : PBP C
 
-Link Adaptable : https://stockio.adaptable.app/main/
+---
+# Tugas 5
+<details>
+<summary>1) Manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya</summary>
+
+
+</details>
+
+<details>
+<summary>2) HTML5 Tag yang saya ketahui</summary>
+
+
+</details>
+
+<details>
+<summary>3) Perbedaan antara margin dan padding</summary>
+
+
+</details>
+
+<details>
+<summary>4) Perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya</summary>
+
+
+</details>
+
+Referensi:
+- 
+- 
 
 ---
 # Tugas 4
