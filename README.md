@@ -9,92 +9,64 @@ Kelas          : PBP C
 
 1. **Element Selector (Tag Selector):**
 
-    * Manfaat
-      
-      Memilih semua elemen dengan tag yang spesifik
+  * Manfaat: Memilih semua elemen dengan tag yang spesifik
 
-    * Waktu Penggunaan
-      
-      ketika ingin menerapkan gaya yang sama pada semua elemen dengan tag tertentu.
+  * Waktu Penggunaan: Ketika ingin menerapkan gaya yang sama pada semua elemen dengan tag tertentu.
 
 2. **Descendant Selector (Space):**
     
-    * Manfaat
-    
-      Memilih elemen yang merupakan anak atau keturunan dari elemen tertentu.
-    
-    * Waktu Penggunaan
-    
-      ketika ingin menerapkan gaya pada elemen yang berada di dalam elemen tertentu.
+  * Manfaat: Memilih elemen yang merupakan anak atau keturunan dari elemen tertentu.
+  
+  * Waktu Penggunaan: Ketika ingin menerapkan gaya pada elemen yang berada di dalam elemen tertentu.
 
 3. **ID Selector (#nama-id):**
 
-    * Manfaat
-      
-      Memilih elemen dengan ID yang spesifik.
-    
-    * Waktu Penggunaan
-    
-      ketika ingin menerapkan gaya atau perilaku unik pada satu elemen tertentu.
+  * Manfaat: Memilih elemen dengan ID yang spesifik.
+  
+  * Waktu Penggunaan: ketika ingin menerapkan gaya atau perilaku unik pada satu elemen tertentu.
 
 4. **Class Selector (.nama-kelas):**
 
-    * Manfaat
-    
-      Memilih elemen berdasarkan kelas yang diberikan.
+  * Manfaat: Memilih elemen berdasarkan kelas yang diberikan.
 
-    * Waktu Penggunaan
-    
-      ketika ingin menerapkan gaya yang sama pada beberapa elemen atau grup elemen.
+  * Waktu Penggunaan: Ketika ingin menerapkan gaya yang sama pada beberapa elemen atau grup elemen.
 
 5. **Universal Selector (*):**
     
-    * Manfaat
-    
-      Memilih semua elemen di halaman.
-    
-    * Waktu Penggunaan
-    
-      ketika mereset atau menetapkan gaya default untuk semua elemen di halaman.
+  * Manfaat: Memilih semua elemen di halaman.
+  
+  * Waktu Penggunaan: Ketika mereset atau menetapkan gaya default untuk semua elemen di halaman.
 
 6. **Adjacent Sibling Selector (+):**
 
-    * Manfaat
-    
-      Memilih elemen yang sejajar (saudara sejajar) dari elemen tertentu.
+  * Manfaat: Memilih elemen yang sejajar (saudara sejajar) dari elemen tertentu.
 
-    * Waktu Penggunaan
-    
-      Ketika ingin menerapkan gaya pada elemen yang berada tepat setelah elemen lain dari jenis yang sama.
+  * Waktu Penggunaan: Ketika ingin menerapkan gaya pada elemen yang berada tepat setelah elemen lain dari jenis yang sama.
 
 7. **Pseudo-Class Selector (:pseudo-class):**
 
-    * Manfaat
-    
-      Memilih elemen berdasarkan keadaan atau perilaku tertentu (seperti :hover, :active, dsb.)
+  * Manfaat: Memilih elemen berdasarkan keadaan atau perilaku tertentu (seperti :hover, :active, dsb.)
 
-    * Waktu Penggunaan
-    
-      ketika ingin menerapkan gaya berdasarkan interaksi pengguna atau keadaan elemen.
+  * Waktu Penggunaan: Ketika ingin menerapkan gaya berdasarkan interaksi pengguna atau keadaan elemen.
 
 </details>
 
 <details>
 <summary>2) HTML5 Tag yang saya ketahui</summary>
 
-* !DOCTYPE: Digunakan untuk mendefinisikan jenis dokumen HTML yang digunakan.
-* html: Tag ini menandai awal dan akhir dari dokumen HTML.
-* head: Berisi informasi terkait dokumen HTML, seperti meta informasi dan tautan ke stylesheet.
-* title: Digunakan di dalam untuk menentukan judul halaman web yang akan ditampilkan di jendela atau tab browser.
-* body: Menandai area utama dokumen yang berisi konten yang ditampilkan kepada pengguna.
-* h1, h2, ..., h6: Tag ini digunakan untuk menandai judul atau heading di halaman web, di mana h1 adalah yang tertinggi dan h6 adalah yang terendah.
-* p: Menandai paragraf dalam dokumen.
-* a: Membuat tautan ke halaman web lain atau alamat email.
-* img: Menampilkan gambar dalam dokumen HTML.
-* button: Digunakan untuk membuat tombol yang dapat di-klik oleh pengguna.
-* div: Menandai sebagian dokumen yang dapat digunakan untuk mengelompokkan dan mengatur elemen-elemen HTML.
-* span: Sama seperti, tetapi digunakan untuk mengelompokkan elemen dalam baris atau sekelompok elemen dalam satu baris.
-* form: Digunakan untuk membuat formulir yang dapat mengirim data ke server.
+  * !DOCTYPE: Digunakan untuk mendefinisikan jenis dokumen HTML yang digunakan.
+  * html: Tag ini menandai awal dan akhir dari dokumen HTML.
+  * head: Berisi informasi terkait dokumen HTML, seperti meta informasi dan tautan ke stylesheet.
+  * title: Digunakan di dalam untuk menentukan judul halaman web yang akan ditampilkan di jendela atau tab browser.
+  * body: Menandai area utama dokumen yang berisi konten yang ditampilkan kepada pengguna.
+  * h1, h2, ..., h6: Tag ini digunakan untuk menandai judul atau heading di halaman web, di mana h1 adalah yang tertinggi dan h6 adalah yang terendah.
+  * p: Menandai paragraf dalam dokumen.
+  * a: Membuat tautan ke halaman web lain atau alamat email.
+  * img: Menampilkan gambar dalam dokumen HTML.
+  * button: Digunakan untuk membuat tombol yang dapat di-klik oleh pengguna.
+  * div: Menandai sebagian dokumen yang dapat digunakan untuk mengelompokkan dan mengatur elemen-elemen HTML.
+  * span: Sama seperti, tetapi digunakan untuk mengelompokkan elemen dalam baris atau sekelompok elemen dalam satu baris.
+  * form: Digunakan untuk membuat formulir yang dapat mengirim data ke server.
 
 </details>
 
@@ -105,15 +77,15 @@ Margin dan padding adalah dua properti dalam CSS yang digunakan untuk mengatur t
 
 1. **Margin**
 
-    * Margin adalah ruang di luar elemen, yang berarti ia memengaruhi jarak antara elemen tersebut dan elemen-elemen lain di sekitarnya.
-    * Margin digunakan untuk mengatur jarak antara elemen dengan elemen-elemen lain di sekitarnya, sehingga memengaruhi tata letak elemen tersebut terhadap elemen-elemen lainnya.
-    * Margin dapat digunakan untuk mengatur jarak vertikal dan horizontal, serta dapat memiliki nilai negatif jika ingin menggeser elemen ke atas atau ke kiri elemen yang berdekatan.
+  * Margin adalah ruang di luar elemen, yang berarti ia memengaruhi jarak antara elemen tersebut dan elemen-elemen lain di sekitarnya.
+  * Margin digunakan untuk mengatur jarak antara elemen dengan elemen-elemen lain di sekitarnya, sehingga memengaruhi tata letak elemen tersebut terhadap elemen-elemen lainnya.
+  * Margin dapat digunakan untuk mengatur jarak vertikal dan horizontal, serta dapat memiliki nilai negatif jika ingin menggeser elemen ke atas atau ke kiri elemen yang berdekatan.
 
 2. **Padding**
 
-    * Padding adalah ruang di dalam elemen, yang berarti ia memengaruhi ruang antara batas elemen dan kontennya sendiri.
-    * Padding digunakan untuk mengatur jarak antara konten elemen dan batas elemen tersebut, sehingga memengaruhi tampilan konten dalam elemen tersebut.
-    * Padding juga dapat digunakan untuk mengatur jarak vertikal dan horizontal, tetapi tidak memengaruhi tata letak elemen terhadap elemen-elemen lain di sekitarnya.
+  * Padding adalah ruang di dalam elemen, yang berarti ia memengaruhi ruang antara batas elemen dan kontennya sendiri.
+  * Padding digunakan untuk mengatur jarak antara konten elemen dan batas elemen tersebut, sehingga memengaruhi tampilan konten dalam elemen tersebut.
+  * Padding juga dapat digunakan untuk mengatur jarak vertikal dan horizontal, tetapi tidak memengaruhi tata letak elemen terhadap elemen-elemen lain di sekitarnya.
 
 </details>
 
@@ -125,42 +97,42 @@ Bootstrap dan Tailwind CSS adalah dua alat yang membantu merancang tampilan situ
   1. **Cara Styling**
 
       * Bootstrap
-      
-      Bootstrap sudah memiliki komponen dengan gaya bawaan. Ini artinya, tampilan yang sudah ada dan bisa digunakan langsung, tetapi kadang-kadang sulit untuk mengubahnya tanpa penyesuaian khusus.
+        
+        Bootstrap sudah memiliki komponen dengan gaya bawaan. Ini artinya, tampilan yang sudah ada dan bisa digunakan langsung, tetapi kadang-kadang sulit untuk mengubahnya tanpa penyesuaian khusus.
 
       * Tailwind CSS
-      
-      Tailwind CSS adalah framework yang berbasis class utilitas. Dengan Tailwind, Anda lebih bebas menentukan tampilan elemen Anda dengan menggabungkan class utilitas.
+
+        Tailwind CSS adalah framework yang berbasis class utilitas. Dengan Tailwind, Anda lebih bebas menentukan tampilan elemen Anda dengan menggabungkan class utilitas.
 
   2. **Kustomisasi**
 
       * Bootstrap
-      
-      Meskipun Bootstrap menyediakan tema yang bisa disesuaikan, seringkali Anda perlu menulis CSS tambahan untuk melakukan penyesuaian styling lebih mendalam.
+
+        Meskipun Bootstrap menyediakan tema yang bisa disesuaikan, seringkali Anda perlu menulis CSS tambahan untuk melakukan penyesuaian styling lebih mendalam.
 
       * Tailwind CSS
-      
-      Tailwind dirancang untuk kustomisasi yang mudah. Anda bisa mengganti styling dengan mengedit berkas konfigurasi Tailwind atau menambahkan class utilitas kustom.
+
+        Tailwind dirancang untuk kustomisasi yang mudah. Anda bisa mengganti styling dengan mengedit berkas konfigurasi Tailwind atau menambahkan class utilitas kustom.
 
   3. **Ukuran Berkas**
 
       * Bootstrap
-      
-      Bootstrap cenderung punya ukuran berkas yang lebih besar karena memiliki banyak komponen yang mungkin tidak semua Anda butuhkan.
+
+        Bootstrap cenderung punya ukuran berkas yang lebih besar karena memiliki banyak komponen yang mungkin tidak semua Anda butuhkan.
 
       * Tailwind CSS
-      
-      Tailwind CSS biasanya lebih ringan karena hanya menyertakan class utilitas yang Anda gunakan.
+
+        Tailwind CSS biasanya lebih ringan karena hanya menyertakan class utilitas yang Anda gunakan.
 
   4. **Kesulitan**
 
       * Bootstrap
-      
-      Bootstrap bisa lebih mudah digunakan jika Anda ingin cepat membuat tampilan yang bagus tanpa harus menulis banyak kode kustom.
+
+        Bootstrap bisa lebih mudah digunakan jika Anda ingin cepat membuat tampilan yang bagus tanpa harus menulis banyak kode kustom.
 
       * Tailwind CSS
-      
-      Tailwind mungkin agak sulit jika Anda belum terbiasa dengan class utilitas, tetapi memberi Anda lebih banyak kendali dan fleksibilitas dalam merancang tampilan.
+
+        Tailwind mungkin agak sulit jika Anda belum terbiasa dengan class utilitas, tetapi memberi Anda lebih banyak kendali dan fleksibilitas dalam merancang tampilan.
 
 </details>
 
@@ -170,23 +142,22 @@ Bootstrap dan Tailwind CSS adalah dua alat yang membantu merancang tampilan situ
 - [x] **Kustomisasi halaman login, register, dan tambah inventori semenarik mungkin**
        
       Sebelum melakukan desain pada HTML, perlu menambahkan link CSS framework dalam case ini adalah Bootstrap dan Java Scriptke dalam `templates/base.html` dan menambahkan tag `<meta name="viewport">` . Untuk menambahkannya bisa dengan menambahkan:
-        ```
-        <head>
-            {% block meta %}
-                ...
-            {% endblock meta %}
 
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+          ```
+          <head>
+              {% block meta %}
+                  ...
+              {% endblock meta %}
 
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-        </head>
-        
-        ```
-      Pada halaman login, register, dan tambah inventori, desain yang saya buat kurang lebih sama, saya menggunakan inline css dengan memanggil `<style>` pada bagian atas html serta dipadukan dengan framework bootstrap. Saya menggunakan inline CSS karena menurut saya ini yang mudah disetup dan digunakan untuk pemula.
-      
-      berikut adalah inline CSS yang saya tambahkan (Sebagai contoh saya menampilkan inline CSS pada halaman login)
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+          </head>
+          
+          ```
+      Pada halaman login, register, dan tambah inventori, desain yang saya buat kurang lebih sama, saya menggunakan inline css dengan memanggil `<style>` pada bagian atas html serta dipadukan dengan framework bootstrap. Saya menggunakan inline CSS karena menurut saya ini yang mudah disetup dan digunakan untuk pemula. Berikut adalah inline CSS yang saya tambahkan (Sebagai contoh saya menampilkan inline CSS pada halaman login)
 
         ```
         <style>
@@ -403,11 +374,14 @@ Bootstrap dan Tailwind CSS adalah dua alat yang membantu merancang tampilan situ
  - [x] **Memberikan warna yang berbeda (teks atau background) pada baris terakhir dari item pada inventori anda menggunakan CSS**
 
       Untuk menambahkan penanda berbeda di akhir tabel, saya menambahkan CSS untuk last child pada `tr` dengan kode berikut:
+
           ```
+          
           table tr:last-child td {
               background-color: rgb(84, 84, 84);
               color: #ffffff;
           }
+
           ```
 
 </details>
