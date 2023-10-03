@@ -1,52 +1,161 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-    <title>Login</title>
+
+    <title > Login </title>
+
 {% endblock meta %}
 
 {% block content %}
+
 <style>
-    .card {
-        margin-top: 10vh;
+    body {
+        background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/865610/ss_e950f52ee4d972c135d1acbd70def74e9eb497b9.1920x1080.jpg?t=1692006226');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 12px;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        position: relative; 
     }
+
+    .logo {
+        position: absolute;
+        top: 12px;
+        left: 22px;
+        z-index: 2;
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+        color: rgb(255, 179, 0);
+    }
+
+    .showcase h1,
+    .showcase label,
+    .showcase a {
+        font-family: 'Helvetica', sans-serif;
+        color: rgb(255, 255, 255);
+    }
+
+    .showcase a {
+        font-family: 'Helvetica', sans-serif;
+        color: #ffffff;
+        text-decoration: underline; 
+    }
+
+    .showcase-bottom{
+        font-family: 'Helvetica', sans-serif;
+        color:rgb(164, 164, 164);
+    }
+
+    .showcase {
+        text-align: center;
+        background-color: #363636ac;
+        border-radius: 16px;
+        padding: 50px;
+        width: 400px;
+        text-align: center;
+        padding-top: 30px;
+        backdrop-filter: blur(6px);
+    }
+
+    .showcase form {
+        font-family: 'Helvetica', sans-serif;
+    }
+
+    .showcase input[type="text"],
+    .showcase input[type="password"] {
+        font-family: 'Helvetica', sans-serif;
+        color: black; 
+        background-color: white;
+    }
+
+    .showcase .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    }
+
+    .showcase .form-group label {
+        font-family: 'Helvetica', sans-serif;
+        margin-bottom: 8px;
+        text-align: left; 
+    }
+
+    .showcase .form-control {
+    font-family: 'Helvetica', sans-serif;
+    width: 100%;
+    padding: 12px; 
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    font-size: 16px; 
+    background-color: white;
+    }
+
+    .showcase .login-button {
+        font-size: 16px;
+        display: inline-flex;
+        height: 56px;
+        padding: 8px 48px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border-radius: 8px;
+        background: var(--primary-blue, rgb(255, 179, 0));
+        color: #ffffff;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .text-title{
+        text-align: left; 
+        font-size:35px;
+        font-weight: 600;
+        padding-bottom: 19px;
+        padding-top: 15px;
+    }
+
 </style>
 
-<div class="container">
-    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-        <div class="col-md-6">
-            <div class="card mt-5">
-                <div class="card-header">
-                    <h1 class="text-center">Login</h1>
-                </div>
-                <div class="card-body">
-                    <form method="POST" action="">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Username:</label>
-                            <input type="text" name="username" placeholder="Username" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" name="password" placeholder="Password" class="form-control">
-                        </div>
-                        <button class="btn btn-primary btn-block" type="submit">Login</button>
-                    </form>
-                    {% if messages %}
-                        <div class="mt-3">
-                            <ul class="list-unstyled">
-                                {% for message in messages %}
-                                    <li class="text-danger">{{ message }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-                </div>
-                <div class="card-footer text-center">
-                    Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
-                </div>
-            </div>
+<div class="logo">
+    STOCKIO
+</div>
+
+<div class="showcase">
+    
+    <h1 class="text-title">Sign In</h1>
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+            <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+        </div>
+        <div class="form-group">
+            <input class="login-button" type="submit" value="Login">
+        </div>
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div class="showcase-bottom">
+        Don't have an account yet? 
+        <div class="showcase-register" >
+            <a href="{% url 'main:register' %}" >Register Now</a>
         </div>
     </div>
+    
 </div>
 
 {% endblock content %}
