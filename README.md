@@ -2,7 +2,7 @@ Nama           : Harjuno Abdullah
 
 Kelas          : PBP C
 
-Link Aplikasi  : (harjuno-abdullah-tugas.pbp.cs.ui.ac.id)
+Link Aplikasi  : [harjuno-abdullah-tugas.pbp.cs.ui.ac.id](harjuno-abdullah-tugas.pbp.cs.ui.ac.id)
 
 ---
 # Tugas 6
