@@ -2,6 +2,49 @@ Nama           : Harjuno Abdullah
 
 Kelas          : PBP C
 
+Link Aplikasi  : (harjuno-abdullah-tugas.pbp.cs.ui.ac.id)
+
+---
+# Tugas 6
+<details>
+<summary>1) Perbedaan antara asynchronous programming dengan synchronous programming</summary>
+
+
+
+</details>
+
+<details>
+<summary>2) Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini</summary>
+
+
+
+</details>
+
+<details>
+<summary>3) Penerapan asynchronous programming pada AJAX</summary>
+
+
+
+</details>
+
+<details>
+<summary>4) Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan</summary>
+
+
+
+</details>
+
+<details>
+<summary>5) Cara mengimplementasikan checklist tugas secara step-by-step</summary>
+
+
+
+</details>
+
+Referensi:
+- https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-5
+- 
+
 ---
 # Tugas 5
 <details>
