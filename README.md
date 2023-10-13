@@ -98,7 +98,7 @@ Asynchronous programming dan synchronous programming merujuk pada dua cara berbe
 
   1. **Fetch API**
 
-    * **Kelebihan:**
+    * Kelebihan:
 
       - Sintaksis yang Mudah Dipahami: Fetch API menggunakan sintaksis Promise, yang relatif mudah dipahami dan digunakan, terutama jika Anda sudah familiar dengan JavaScript Promise.
 
@@ -106,19 +106,19 @@ Asynchronous programming dan synchronous programming merujuk pada dua cara berbe
       
       - Built-in di Banyak Browser: Fetch API adalah bagian dari JavaScript modern dan sudah built-in di sebagian besar browser terbaru, tidak memerlukan instalasi tambahan.
     
-    * **Kekurangan:**
+    * Kekurangan:
 
       Tidak Support di Browser Lama: Meskipun sudah umum digunakan, Fetch API tidak didukung di beberapa versi browser yang lebih lama, seperti Internet Explorer.
 
   2. **jQuery**
 
-    * **Kelebihan:**
+    * Kelebihan:
     
       - Kompatibilitas: jQuery dirancang untuk memastikan konsistensi dalam pemrograman JavaScript di berbagai browser. Ini berarti, ketika Anda menggunakan jQuery, Anda tidak perlu khawatir tentang perbedaan implementasi di browser-browser yang berbeda.
     
       - Fungsionalitas yang Kaya: jQuery menyediakan berbagai fungsi bantu dan efek animasi, yang memudahkan pengembangan antarmuka pengguna yang menarik dan interaktif.
     
-    * **Kekurangan:**
+    * Kekurangan:
     
       - Ukuran: jQuery memiliki ukuran file yang lebih besar dibandingkan Fetch API karena menyertakan banyak fitur. Hal ini dapat memperlambat waktu muat situs, terutama pada koneksi internet yang lambat.
     
@@ -304,7 +304,8 @@ Asynchronous programming dan synchronous programming merujuk pada dua cara berbe
 
 Referensi:
 - https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-5
-- 
+- https://www.dicoding.com/blog/mengenal-fungsi-asynchronous-request-pada-javascript/
+- https://binus.ac.id/malang/2022/05/asynchronous-vs-synchronous-programming/
 
 ---
 # Tugas 5
