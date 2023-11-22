@@ -10,6 +10,8 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+import json
 
 @login_required(login_url='/login')
 def show_main(request):
@@ -114,7 +116,7 @@ def remove_product(request, id):
     response = HttpResponseRedirect(reverse("main:show_main"))
     return response
 
-@login_required(login_url='/login')
+# @login_required(login_url='/login')
 def get_product_json(request):
     product_item = Product.objects.filter(user=request.user)
     return HttpResponse(serializers.serialize('json', product_item))
@@ -140,3 +142,22 @@ def delete_product_ajax(request, id):
     product.delete()
     response = HttpResponseRedirect(reverse("main:show_main"))
     return response
+
+@csrf_exempt
+def create_product_flutter(request):
+    if request.method == 'POST':
+        
+        data = json.loads(request.body)
+
+        new_product = Product.objects.create(
+            user = request.user,
+            name = data["name"],
+            amount = int(data["amount"]),
+            description = data["description"]
+        )
+
+        new_product.save()
+
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
